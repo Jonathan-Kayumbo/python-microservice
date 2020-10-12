@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jonathankayumbopythonmicroservice 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jonathankayumbopythonmicroservice
+  template:
+    metadata:
+      labels:
+        app: jonathankayumbopythonmicroservice 
+    spec:
+      containers:
+        - name: jonathankayumbopythonmicroservice 
+          image: mycontainerregistryalten.azurecr.io/jonathankayumbopythonmicroservice
+          ports:
+          - containerPort: 9090
